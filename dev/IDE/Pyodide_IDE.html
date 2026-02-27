@@ -1230,7 +1230,7 @@ await main_async_def()
                     document.body.appendChild(script); // bodyの末尾に追加することで即時実行される
 
                     console.log("Injected JS code successfully.");
-                    js_result_area_element.value = "Injected JS code successfully.\n" + js_result_area_element.value;
+                    //js_result_area_element.value = "Injected JS code successfully.\n" + js_result_area_element.value;
                 } else {
                     js_result_area_element.value = "開発環境以外で「js_inject_script()」は許可されていません";
                 }
