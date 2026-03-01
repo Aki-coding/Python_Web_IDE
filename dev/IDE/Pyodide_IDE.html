@@ -327,372 +327,372 @@
     <style id="body_style">
 		/* ### Base Layout (基本レイアウト) ### */
 		body {
-        background-color: rgb(25, 25, 25); /* 背景色: 暗いグレー */
-        color: white; /* 文字色: 白 */
-        font-family: "Segoe UI", "Meiryo UI", sans-serif; /* フォント設定 */
-        margin: 0; /* 余白をリセット (外側のスペース) */
-        padding: 0; /* パディングをリセット (内側のスペース) */
-        display: flex; /* Flexboxコンテナとして設定 */
-        flex-direction: column; /* 子要素を縦方向に配置 (header, container, footer) */
-        height: 100vh; /* 高さ: ビューポートの高さに合わせる */
-        overflow: hidden; /* はみ出したコンテンツを非表示 (全体スクロールを禁止) */
+            background-color: rgb(25, 25, 25); /* 背景色: 暗いグレー */
+            color: white; /* 文字色: 白 */
+            font-family: "Segoe UI", "Meiryo UI", sans-serif; /* フォント設定 */
+            margin: 0; /* 余白をリセット (外側のスペース) */
+            padding: 0; /* パディングをリセット (内側のスペース) */
+            display: flex; /* Flexboxコンテナとして設定 */
+            flex-direction: column; /* 子要素を縦方向に配置 (header, container, footer) */
+            height: 100vh; /* 高さ: ビューポートの高さに合わせる */
+            overflow: hidden; /* はみ出したコンテンツを非表示 (全体スクロールを禁止) */
 		}
 		#container {
-        /* メインコンテナ（サイドバーとメインコンテンツを横並びにする） */
-        display: flex; /* Flexboxコンテナとして設定 */
-        flex: 1; /* 拡大率: 1 (残りの垂直スペースを全て使用) */
-        overflow: hidden; /* はみ出しを隠す */
+            /* メインコンテナ（サイドバーとメインコンテンツを横並びにする） */
+            display: flex; /* Flexboxコンテナとして設定 */
+            flex: 1; /* 拡大率: 1 (残りの垂直スペースを全て使用) */
+            overflow: hidden; /* はみ出しを隠す */
 		}
 		footer {
-        /* フッター（実行結果エリア）のスタイル */
-        height: 25%; /* 初期高さ: 25% */
-        background-color: #333; /* 背景色: やや暗いグレー */
-        display: flex; /* Flexboxコンテナとして設定 */
-        flex-direction: column; /* 子要素を縦方向に配置 */
-        padding: 0px 0px; /* 内部パディング */
-        box-sizing: border-box; /* ボックスサイズ計算: パディングを高さに含める */
-        flex-shrink: 0; /* 縮小を禁止（高さ固定） */
-        width: 100%; /* 幅: 100% (幅いっぱい) */
+            /* フッター（実行結果エリア）のスタイル */
+            height: 25%; /* 初期高さ: 25% */
+            background-color: #333; /* 背景色: やや暗いグレー */
+            display: flex; /* Flexboxコンテナとして設定 */
+            flex-direction: column; /* 子要素を縦方向に配置 */
+            padding: 0px 0px; /* 内部パディング */
+            box-sizing: border-box; /* ボックスサイズ計算: パディングを高さに含める */
+            flex-shrink: 0; /* 縮小を禁止（高さ固定） */
+            width: 100%; /* 幅: 100% (幅いっぱい) */
 		}
 
 		/* ### Footer Elements (フッター内の要素) ### */
 		#footer_area_container {
-        /* フッター内部のエリアコンテナ（結果エリアとプロットエリアを横並びにする） */
-        display: flex; /* Flexboxコンテナとして設定 (子要素を横並びに配置) */
-        flex: 1; /* 拡大率: 1 (縦方向の残りのスペースを全て使用) */
-        gap: 0px; /* アイテム間の隙間: 5px */
-        min-height: 0; /* 最小高さ: 0 (flexアイテムとしての高さの最小値を確保) */
+            /* フッター内部のエリアコンテナ（結果エリアとプロットエリアを横並びにする） */
+            display: flex; /* Flexboxコンテナとして設定 (子要素を横並びに配置) */
+            flex: 1; /* 拡大率: 1 (縦方向の残りのスペースを全て使用) */
+            gap: 0px; /* アイテム間の隙間: 5px */
+            min-height: 0; /* 最小高さ: 0 (flexアイテムとしての高さの最小値を確保) */
 		}
 		#py_result_area {
-        /* Pythonの実行結果（標準出力）表示エリア */
-        flex: 6 1 0%; /* 拡大:0, 縮小:0, 基準サイズ:auto (サイズ固定) */
-        padding: 1% 1%; /* 内部パディング (上下1%, 左右5%) */
-        background: rgb(30, 30, 30); /* 背景色: 暗いグレー */
-        color: rgb(250, 250, 250); /* 文字色: 非常に明るいグレー */
-        border: 1px solid #555; /* 境界線: 1px 濃いグレーの実線 */
-        border-radius: 4px; /* 角丸: 4px */
-        font-size: 14px; /* フォントサイズ: 14px */
-        overflow: auto; /* はみ出し処理: コンテンツがはみ出たらスクロール可能に */
-        resize: none; /* 手動リサイズ禁止 */
-        box-sizing: border-box; /* パディングと境界線を幅と高さに含める */
-        min-width: 50px; /* 最小幅: 50px */
+            /* Pythonの実行結果（標準出力）表示エリア */
+            flex: 6 1 0%; /* 拡大:0, 縮小:0, 基準サイズ:auto (サイズ固定) */
+            padding: 1% 1%; /* 内部パディング (上下1%, 左右5%) */
+            background: rgb(30, 30, 30); /* 背景色: 暗いグレー */
+            color: rgb(250, 250, 250); /* 文字色: 非常に明るいグレー */
+            border: 1px solid #555; /* 境界線: 1px 濃いグレーの実線 */
+            border-radius: 4px; /* 角丸: 4px */
+            font-size: 14px; /* フォントサイズ: 14px */
+            overflow: auto; /* はみ出し処理: コンテンツがはみ出たらスクロール可能に */
+            resize: none; /* 手動リサイズ禁止 */
+            box-sizing: border-box; /* パディングと境界線を幅と高さに含める */
+            min-width: 50px; /* 最小幅: 50px */
 		}
 		#js_result_area {
-        /* JavaScriptの実行結果（ログなど）表示エリア */
-        flex: 3 1 0%; /* 拡大:0, 縮小:0, 基準サイズ:auto (サイズ固定) */
-        padding: 1% 1%; /* 内部パディング (上下1%, 左右5%) */
-        background: rgb(30, 30, 30); /* 背景色: 暗いグレー */
-        color: rgb(250, 250, 250); /* 文字色: 非常に明るいグレー */
-        border: 1px solid #555; /* 境界線: 1px 濃いグレーの実線 */
-        border-radius: 4px; /* 角丸: 4px */
-        font-size: 14px; /* フォントサイズ: 14px */
-        overflow: auto; /* はみ出し処理: コンテンツがはみ出たらスクロール可能に */
-        resize: none; /* 手動リサイズ禁止 */
-        box-sizing: border-box; /* パディングと境界線を幅と高さに含める */
-        min-width: 50px; /* 最小幅: 50px */
+            /* JavaScriptの実行結果（ログなど）表示エリア */
+            flex: 3 1 0%; /* 拡大:0, 縮小:0, 基準サイズ:auto (サイズ固定) */
+            padding: 1% 1%; /* 内部パディング (上下1%, 左右5%) */
+            background: rgb(30, 30, 30); /* 背景色: 暗いグレー */
+            color: rgb(250, 250, 250); /* 文字色: 非常に明るいグレー */
+            border: 1px solid #555; /* 境界線: 1px 濃いグレーの実線 */
+            border-radius: 4px; /* 角丸: 4px */
+            font-size: 14px; /* フォントサイズ: 14px */
+            overflow: auto; /* はみ出し処理: コンテンツがはみ出たらスクロール可能に */
+            resize: none; /* 手動リサイズ禁止 */
+            box-sizing: border-box; /* パディングと境界線を幅と高さに含める */
+            min-width: 50px; /* 最小幅: 50px */
 		}
 		#extension_area {
-        /* グラフ/プロット表示エリア */
-        flex: 3 1 0%; /* 拡大:0, 縮小:0, 基準サイズ:auto (サイズ固定) */
-        padding: 0.5% 0.5%; /* 内部パディング */
-        background: rgb(30, 30, 30); /* 背景色: 黒系の色に変更 */
-        color: rgb(250, 250, 250); /* 文字色: 白 */
-        border: 1px solid #555; /* 境界線: 1px 濃いグレーの実線 */
-        border-radius: 4px; /* 角丸: 4px */
-        /* font-size: 14px; /* フォントサイズ: 14px */
-        overflow: auto; /* はみ出し処理: コンテンツがはみ出たらスクロール可能に */
-        box-sizing: border-box; /* パディングと境界線を幅と高さに含める */
-        min-width: 50px; /* 最小幅: 50px */
-        height: 100%; /* 親要素の高さに強制的に合わせる */
-        /* min-height: 0; /* Flexboxの子要素による親要素の高さ押し広げを防ぎ、overflowを有効にする */
-        display: flex; /* Flexboxコンテナとして設定 */
-        flex-direction: column; /* 子要素を縦方向に配置 */
-        align-items: center; /* 子要素を水平方向の中央に揃える (画像を中央寄せ) */
+            /* グラフ/プロット表示エリア */
+            flex: 3 1 0%; /* 拡大:0, 縮小:0, 基準サイズ:auto (サイズ固定) */
+            padding: 0.5% 0.5%; /* 内部パディング */
+            background: rgb(30, 30, 30); /* 背景色: 黒系の色に変更 */
+            color: rgb(250, 250, 250); /* 文字色: 白 */
+            border: 1px solid #555; /* 境界線: 1px 濃いグレーの実線 */
+            border-radius: 4px; /* 角丸: 4px */
+            /* font-size: 14px; /* フォントサイズ: 14px */
+            overflow: auto; /* はみ出し処理: コンテンツがはみ出たらスクロール可能に */
+            box-sizing: border-box; /* パディングと境界線を幅と高さに含める */
+            min-width: 50px; /* 最小幅: 50px */
+            height: 100%; /* 親要素の高さに強制的に合わせる */
+            /* min-height: 0; /* Flexboxの子要素による親要素の高さ押し広げを防ぎ、overflowを有効にする */
+            display: flex; /* Flexboxコンテナとして設定 */
+            flex-direction: column; /* 子要素を縦方向に配置 */
+            align-items: center; /* 子要素を水平方向の中央に揃える (画像を中央寄せ) */
 		}
 		#extension_area img {
-        /* プロットエリア内の画像 */
-        max-width: 100%; /* 最大幅: 親要素の幅からはみ出さない */
-        margin-bottom: 10px; /* 下部マージン */
-        /* box-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* ボックスシャドウ: x:2px, y:2px, ぼかし:5px, 色:黒(透明度0.2) */
+            /* プロットエリア内の画像 */
+            max-width: 100%; /* 最大幅: 親要素の幅からはみ出さない */
+            margin-bottom: 10px; /* 下部マージン */
+            /* box-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* ボックスシャドウ: x:2px, y:2px, ぼかし:5px, 色:黒(透明度0.2) */
 		}
 
 		/* ### Vertical Resizer (フッター内の垂直リサイズバー) ### */
 		#output_resizer_v {
-        /* py_result_area <-> js_result_area のリサイズバー */
-        width: 5px; /* 幅: 5px */
-        cursor: ew-resize; /* カーソル: 左右リサイズカーソル */
-        background-color: #444; /* 背景色: 濃いグレー */
-        height: 100%; /* 高さ: 親要素いっぱいに */
-        flex-shrink: 0; /* 縮小を禁止 */
+            /* py_result_area <-> js_result_area のリサイズバー */
+            width: 5px; /* 幅: 5px */
+            cursor: ew-resize; /* カーソル: 左右リサイズカーソル */
+            background-color: #444; /* 背景色: 濃いグレー */
+            height: 100%; /* 高さ: 親要素いっぱいに */
+            flex-shrink: 0; /* 縮小を禁止 */
 		}
 		#output_resizer_v2 {
-        /* js_result_area <-> extension_area のリサイズバー */
-        width: 5px; /* 幅: 5px */
-        cursor: ew-resize; /* カーソル: 左右リサイズカーソル */
-        background-color: #444; /* 背景色: 濃いグレー */
-        height: 100%; /* 高さ: 親要素いっぱいに */
-        flex-shrink: 0; /* 縮小を禁止 */
+            /* js_result_area <-> extension_area のリサイズバー */
+            width: 5px; /* 幅: 5px */
+            cursor: ew-resize; /* カーソル: 左右リサイズカーソル */
+            background-color: #444; /* 背景色: 濃いグレー */
+            height: 100%; /* 高さ: 親要素いっぱいに */
+            flex-shrink: 0; /* 縮小を禁止 */
 		}
 
 		/* その他のフッター内の要素 */
 		footer div {
-        font-size: 0.8em; /* フォントサイズ: 親要素の0.8倍 */
-        margin-bottom: 0px; /* 下部マージン: 4px */
+            font-size: 0.8em; /* フォントサイズ: 親要素の0.8倍 */
+            margin-bottom: 0px; /* 下部マージン: 4px */
 		}
 		button, input[type="file"] {
-        margin-right: 10px; /* 右マージン: 10px */
+            margin-right: 10px; /* 右マージン: 10px */
 		}
 
 		#main_content { /* エディターとフッターを含むメインコンテンツエリア */
-        display: flex; /* Flexboxコンテナとして設定 */
-        flex-direction: column; /* 子要素を縦並びにする */
-        flex: 1; /* 拡大率: 1 (横幅の残りを全て使う) */
-        height: 100%; /* 高さ: 親要素いっぱいに */
-        min-width: 0; /* 最小幅: 0 (Flexboxの縮小トラブル防止) */
-        overflow: hidden; /* はみ出し防止 */
+            display: flex; /* Flexboxコンテナとして設定 */
+            flex-direction: column; /* 子要素を縦並びにする */
+            flex: 1; /* 拡大率: 1 (横幅の残りを全て使う) */
+            height: 100%; /* 高さ: 親要素いっぱいに */
+            min-width: 0; /* 最小幅: 0 (Flexboxの縮小トラブル防止) */
+            overflow: hidden; /* はみ出し防止 */
 		}
 		#editor { /* エディター本体のコンテナ */
-        flex: 1; /* 拡大率: 1 (高さの残りを全て使う（フッター以外の部分）) */
-        width: 100%; /* 幅: 100% */
-        height: auto; /* 高さ: 自動 */
-        min-height: 0; /* 最小高さ: 0 (Flexboxの縮小トラブル防止) */
+            flex: 1; /* 拡大率: 1 (高さの残りを全て使う（フッター以外の部分）) */
+            width: 100%; /* 幅: 100% */
+            height: auto; /* 高さ: 自動 */
+            min-height: 0; /* 最小高さ: 0 (Flexboxの縮小トラブル防止) */
 		}
 		#editor.editor-dragover { /* エディターへのドラッグ時の視覚効果 */
-        opacity: 0.7; /* 不透明度: 70% */
-        border: 3px dashed #007acc; /* 境界線: 3px 青っぽい破線 */
-        background-color: #2d2d2d; /* 背景色: 暗いグレー */
+            opacity: 0.7; /* 不透明度: 70% */
+            border: 3px dashed #007acc; /* 境界線: 3px 青っぽい破線 */
+            background-color: #2d2d2d; /* 背景色: 暗いグレー */
 		}
 		#plot_container {
-        flex: 1;
-        width: 100%;
-        height: 100%;
-        min-height: 0;
-        display: none; /* 初期状態は非表示 */
-        background-color: rgb(30, 30, 30); /* エディタ背景に合わせる */
-        flex-direction: column;
-        align-items: center; /* 画像を中央揃え */
-        overflow-y: auto;    /* 縦スクロール有効 */
-        padding: 10px;
-        box-sizing: border-box;
+            flex: 1;
+            width: 100%;
+            height: 100%;
+            min-height: 0;
+            display: none; /* 初期状態は非表示 */
+            background-color: rgb(30, 30, 30); /* エディタ背景に合わせる */
+            flex-direction: column;
+            align-items: center; /* 画像を中央揃え */
+            overflow-y: auto;    /* 縦スクロール有効 */
+            padding: 10px;
+            box-sizing: border-box;
 		}
 		#plot_container img {
-        max-width: 95%;      /* 画面からはみ出さないように */
-        margin-bottom: 20px; /* 画像間の余白 */
-        box-shadow: 0 0 10px rgba(0,0,0,0.5); /* 視認性向上のための影 */
+            max-width: 95%;      /* 画面からはみ出さないように */
+            margin-bottom: 20px; /* 画像間の余白 */
+            box-shadow: 0 0 10px rgba(0,0,0,0.5); /* 視認性向上のための影 */
 		}
 		#preview_container {
-        flex: 1;
-        width: 100%;
-        height: 100%;
-        min-height: 0;
-        display: none; /* 初期状態は非表示 */
-        background-color: white;
-        flex-direction: column;
+            flex: 1;
+            width: 100%;
+            height: 100%;
+            min-height: 0;
+            display: none; /* 初期状態は非表示 */
+            background-color: white;
+            flex-direction: column;
 		}
 		#preview_frame {
-        width: 100%;
-        height: 100%;
-        border: none;
+            width: 100%;
+            height: 100%;
+            border: none;
 		}
  		/* ### Spreadsheet Styles ### */
  		#spreadsheet_container {
-        flex: 1;
-        width: 100%;
-        height: 100%;
-        min-height: 0;
-        display: none;
-        background-color: #1e1e1e; /* IDEと同じ背景色 */
-        color: #ccc; /* IDEと同じ文字色 */
-        overflow: auto;
+            flex: 1;
+            width: 100%;
+            height: 100%;
+            min-height: 0;
+            display: none;
+            background-color: #1e1e1e; /* IDEと同じ背景色 */
+            color: #ccc; /* IDEと同じ文字色 */
+            overflow: auto;
 		}
 
 		.spreadsheet_instance {
-        display: none;
+            display: none;
 		}
 		.spreadsheet_instance.active_spreadsheet {
-        display: block;
+            display: block;
 		}
 
 		/* --- Jspreadsheet ダークテーマ用CSSの上書き --- */
 		/* テーブル全体の背景と枠線 */
 		.jexcel {
-        background-color: #1e1e1e !important;
-        border: 1px solid #333 !important;
+            background-color: #1e1e1e !important;
+            border: 1px solid #333 !important;
 		}
 		/* 通常セルの色と枠線 */
 		.jexcel tbody tr td {
-        background-color: #1e1e1e !important;
-        color: #ccc !important;
-        border-bottom: 1px solid #333 !important;
-        border-right: 1px solid #333 !important;
+            background-color: #1e1e1e !important;
+            color: #ccc !important;
+            border-bottom: 1px solid #333 !important;
+            border-right: 1px solid #333 !important;
 		}
 		/* 行・列のヘッダー (A, B, C... / 1, 2, 3...) */
 		.jexcel thead tr td, 
 		.jexcel tbody tr td.jexcel_label {
-        background-color: #2d2d2d !important; /* 少し明るいグレーで区別 */
-        color: #ccc !important;
-        border-bottom: 1px solid #444 !important;
-        border-right: 1px solid #444 !important;
+            background-color: #2d2d2d !important; /* 少し明るいグレーで区別 */
+            color: #ccc !important;
+            border-bottom: 1px solid #444 !important;
+            border-right: 1px solid #444 !important;
 		}
 		/* 選択中のセル */
 		.jexcel tbody tr td.highlight {
-        background-color: #062f4f !important; /* VSCode等の選択色に近い深い青 */
-        color: #fff !important;
+            background-color: #062f4f !important; /* VSCode等の選択色に近い深い青 */
+            color: #fff !important;
 		}
 		/* 編集中のセル (ダブルクリック時) */
 		.jexcel tbody tr td.editor {
-        background-color: #1e1e1e !important;
-        color: #fff !important;
+            background-color: #1e1e1e !important;
+            color: #fff !important;
 		}
-    .jexcel tbody tr td.editor input,
+        .jexcel tbody tr td.editor input,
 		.jexcel tbody tr td.editor textarea {
-        color: #ffffff !important;
-        background-color: #1e1e1e !important;
+            color: #ffffff !important;
+            background-color: #1e1e1e !important;
 		}
 		/* ### Tab Bar Styles (タブバーのスタイル) ### */
 		#tab_bar_container {
-        /* タブバーのコンテナ */
-        display: flex; /* Flexboxコンテナとして設定 */
-        background-color: #252526; /* 背景色: VSCodeライクなヘッダー色 */
-        height: 35px; /* 高さ: 35px */
-        overflow-x: auto; /* X軸スクロール: タブが多い場合は水平スクロール */
-        flex-shrink: 0; /* 縮小を禁止（高さ固定） */
-        align-items: center; /* 子要素を垂直方向の中央に揃える */
-        border-bottom: 1px solid #1e1e1e; /* 下境界線: 1px 非常に暗いグレーの実線 */
+            /* タブバーのコンテナ */
+            display: flex; /* Flexboxコンテナとして設定 */
+            background-color: #252526; /* 背景色: VSCodeライクなヘッダー色 */
+            height: 35px; /* 高さ: 35px */
+            overflow-x: auto; /* X軸スクロール: タブが多い場合は水平スクロール */
+            flex-shrink: 0; /* 縮小を禁止（高さ固定） */
+            align-items: center; /* 子要素を垂直方向の中央に揃える */
+            border-bottom: 1px solid #1e1e1e; /* 下境界線: 1px 非常に暗いグレーの実線 */
 		}
 		/* スクロールバーのスタイル（webkit系） */
 		#tab_bar_container::-webkit-scrollbar {
-        height: 4px; /* スクロールバーの高さ: 4px */
+            height: 4px; /* スクロールバーの高さ: 4px */
 		}
 		#tab_bar_container::-webkit-scrollbar-thumb {
-			  background: #424242; /* スクロールバーのツマミの色 */
+            background: #424242; /* スクロールバーのツマミの色 */
 		}
 		.tab_item {
-        /* 各タブアイテムの基本スタイル */
-        display: flex; /* Flexboxコンテナとして設定 */
-        align-items: center; /* 子要素を垂直方向の中央に揃える */
-        padding: 0 10px; /* 内部パディング (上下0, 左右10px) */
-        height: 100%; /* 高さ: 親要素いっぱいに */
-        background-color: #2d2d2d; /* 背景色: 暗いグレー */
-        color: #969696; /* 文字色: グレー */
-        font-size: 13px; /* フォントサイズ: 13px */
-        cursor: pointer; /* カーソル: ポインター */
-        border-right: 1px solid #252526; /* 右境界線: 1px 非常に暗いグレーの実線 */
-        min-width: 80px; /* 最小幅: 80px */
-        max-width: 200px; /* 最大幅: 200px */
-        user-select: none; /* ユーザーによる選択を禁止 */
+            /* 各タブアイテムの基本スタイル */
+            display: flex; /* Flexboxコンテナとして設定 */
+            align-items: center; /* 子要素を垂直方向の中央に揃える */
+            padding: 0 10px; /* 内部パディング (上下0, 左右10px) */
+            height: 100%; /* 高さ: 親要素いっぱいに */
+            background-color: #2d2d2d; /* 背景色: 暗いグレー */
+            color: #969696; /* 文字色: グレー */
+            font-size: 13px; /* フォントサイズ: 13px */
+            cursor: pointer; /* カーソル: ポインター */
+            border-right: 1px solid #252526; /* 右境界線: 1px 非常に暗いグレーの実線 */
+            min-width: 80px; /* 最小幅: 80px */
+            max-width: 200px; /* 最大幅: 200px */
+            user-select: none; /* ユーザーによる選択を禁止 */
 		}
 		.tab_item:hover {
-			  background-color: #383838; /* ホバー時の背景色 */
+            background-color: #383838; /* ホバー時の背景色 */
 		}
 		.tab_item.active_tab {
-        /* アクティブなタブ */
-        background-color: #1e1e1e; /* 背景色: エディタ背景と同じ色 */
-        color: #ffffff; /* 文字色: 白 */
-        border-top: 1px solid #007acc; /* 上境界線: 1px 青の実線 (強調) */
+            /* アクティブなタブ */
+            background-color: #1e1e1e; /* 背景色: エディタ背景と同じ色 */
+            color: #ffffff; /* 文字色: 白 */
+            border-top: 1px solid #007acc; /* 上境界線: 1px 青の実線 (強調) */
 		}
 		.tab_name {
-        /* タブのファイル名 */
-        white-space: nowrap; /* テキストの折り返しを禁止 */
-        overflow: hidden; /* はみ出した部分を隠す */
-        text-overflow: ellipsis; /* はみ出したテキストを三点リーダーで表示 */
-        margin-right: 8px; /* 右マージン: 8px */
+            /* タブのファイル名 */
+            white-space: nowrap; /* テキストの折り返しを禁止 */
+            overflow: hidden; /* はみ出した部分を隠す */
+            text-overflow: ellipsis; /* はみ出したテキストを三点リーダーで表示 */
+            margin-right: 8px; /* 右マージン: 8px */
 		}
 		.tab_close_btn {
-        /* タブを閉じるボタン */
-        border-radius: 50%; /* 角丸: 円形 */
-        width: 16px; /* 幅: 16px */
-        height: 16px; /* 高さ: 16px */
-        text-align: center; /* テキストを中央揃え */
-        line-height: 14px; /* 行の高さ: 14px */
-        font-size: 12px; /* フォントサイズ: 12px */
-        color: #ccc; /* 文字色: 薄いグレー */
-        margin-left: auto; /* 左マージンを自動にし、要素を右寄せ */
+            /* タブを閉じるボタン */
+            border-radius: 50%; /* 角丸: 円形 */
+            width: 16px; /* 幅: 16px */
+            height: 16px; /* 高さ: 16px */
+            text-align: center; /* テキストを中央揃え */
+            line-height: 14px; /* 行の高さ: 14px */
+            font-size: 12px; /* フォントサイズ: 12px */
+            color: #ccc; /* 文字色: 薄いグレー */
+            margin-left: auto; /* 左マージンを自動にし、要素を右寄せ */
 		}
 		.tab_close_btn:hover {
-        background-color: #444; /* ホバー時の背景色: 濃いグレー */
-        color: #fff; /* ホバー時の文字色: 白 */
+            background-color: #444; /* ホバー時の背景色: 濃いグレー */
+            color: #fff; /* ホバー時の文字色: 白 */
 		}
 		.tab_unsaved_indicator {
-        /* 未保存インジケーター（通常は非表示） */
-        font-size: 18px; /* フォントサイズ: 18px */
-        line-height: 10px; /* 行の高さ: 10px */
-        margin-left: 5px; /* 左マージン: 5px */
-        display: none; /* 要素を非表示 */
+            /* 未保存インジケーター（通常は非表示） */
+            font-size: 18px; /* フォントサイズ: 18px */
+            line-height: 10px; /* 行の高さ: 10px */
+            margin-left: 5px; /* 左マージン: 5px */
+            display: none; /* 要素を非表示 */
 		}
 		.tab_plus_btn {
-        /* 新規タブを追加するボタン */
-        display: flex; /* Flexboxコンテナとして設定 */
-        align-items: center; /* 子要素を垂直方向の中央に揃える */
-        justify-content: center; /* 子要素を水平方向の中央に揃える */
-        padding: 0 10px; /* 内部パディング (上下0, 左右10px) */
-        height: 100%; /* 高さ: 親要素いっぱいに */
-        background-color: transparent; /* 背景色: 透明 */
-        color: #969696; /* 文字色: グレー */
-        font-size: 16px; /* フォントサイズ: 16px */
-        cursor: pointer; /* カーソル: ポインター */
-        min-width: 30px; /* 最小幅: 30px */
-        border-right: 1px solid #252526; /* 右境界線: 1px 非常に暗いグレーの実線 */
-        user-select: none; /* ユーザーによる選択を禁止 */
+            /* 新規タブを追加するボタン */
+            display: flex; /* Flexboxコンテナとして設定 */
+            align-items: center; /* 子要素を垂直方向の中央に揃える */
+            justify-content: center; /* 子要素を水平方向の中央に揃える */
+            padding: 0 10px; /* 内部パディング (上下0, 左右10px) */
+            height: 100%; /* 高さ: 親要素いっぱいに */
+            background-color: transparent; /* 背景色: 透明 */
+            color: #969696; /* 文字色: グレー */
+            font-size: 16px; /* フォントサイズ: 16px */
+            cursor: pointer; /* カーソル: ポインター */
+            min-width: 30px; /* 最小幅: 30px */
+            border-right: 1px solid #252526; /* 右境界線: 1px 非常に暗いグレーの実線 */
+            user-select: none; /* ユーザーによる選択を禁止 */
 		}
 		.tab_plus_btn:hover {
-        background-color: #383838; /* ホバー時の背景色: 暗いグレー */
-        color: #fff; /* ホバー時の文字色: 白 */
+            background-color: #383838; /* ホバー時の背景色: 暗いグレー */
+            color: #fff; /* ホバー時の文字色: 白 */
 		}
 
 		/* ### Resizer Styles (リサイズバーのスタイル) ### */
 
 		/* Sidebar <-> Editor の垂直リサイズバー */
 		#sidebar_resizer_v {
-        width: 5px; /* 幅: 5px */
-        cursor: ew-resize; /* カーソル: 左右リサイズカーソル */
-        background-color: #444; /* 背景色: 濃いグレー */
-        height: 100%; /* 高さ: 親要素いっぱいに */
+            width: 5px; /* 幅: 5px */
+            cursor: ew-resize; /* カーソル: 左右リサイズカーソル */
+            background-color: #444; /* 背景色: 濃いグレー */
+            height: 100%; /* 高さ: 親要素いっぱいに */
 		}
 
 		/* Script_Explorer <-> VFS_Explorer の水平リサイズバー */
 		#sidebar_resizer_h {
-        height: 5px; /* 高さ: 5px */
-        cursor: ns-resize; /* カーソル: 上下リサイズカーソル */
-        background-color: #444; /* 背景色: 濃いグレー */
-        flex-shrink: 0; /* 縮小を禁止（高さ固定） */
+            height: 5px; /* 高さ: 5px */
+            cursor: ns-resize; /* カーソル: 上下リサイズカーソル */
+            background-color: #444; /* 背景色: 濃いグレー */
+            flex-shrink: 0; /* 縮小を禁止（高さ固定） */
 		}
 
 		/* VFS_Explorer <-> Outline の水平リサイズバー */
 		#sidebar_resizer_h2 {
-        height: 5px; /* 高さ: 5px */
-        cursor: ns-resize; /* カーソル: 上下リサイズカーソル */
-        background-color: #444; /* 背景色: 濃いグレー */
-        flex-shrink: 0; /* 縮小を禁止（高さ固定） */
+            height: 5px; /* 高さ: 5px */
+            cursor: ns-resize; /* カーソル: 上下リサイズカーソル */
+            background-color: #444; /* 背景色: 濃いグレー */
+            flex-shrink: 0; /* 縮小を禁止（高さ固定） */
 		}
 
 		#footer_resizer_h { /* Editor <-> Footer の水平リサイズバー */
-        height: 5px; /* 高さ: 5px */
-        cursor: ns-resize; /* カーソル: 上下リサイズカーソル */
-        background-color: #444; /* 背景色: 濃いグレー */
-        flex-shrink: 0; /* 縮小を禁止（潰れないようにする） */
-        width: 100%; /* 幅: 100% */
+            height: 5px; /* 高さ: 5px */
+            cursor: ns-resize; /* カーソル: 上下リサイズカーソル */
+            background-color: #444; /* 背景色: 濃いグレー */
+            flex-shrink: 0; /* 縮小を禁止（潰れないようにする） */
+            width: 100%; /* 幅: 100% */
 		}
 
 		/* ### Sidebar Layout (サイドバーのレイアウト) ### */
 		#sidebar_area_container {
-        /* サイドバー全体のコンテナ (Script_Explorer + VFS_Explorer + Outline) */
-        width: 280px; /* 初期幅: 280px */
-        min-width: 150px; /* 最小幅: 150px */
-        background-color: rgb(30, 30, 30); /* 背景色: 暗いグレー */
-        display: flex; /* Flexboxコンテナとして設定 */
-        flex-direction: column; /* 子要素を縦方向に配置 */
-        overflow: hidden; /* はみ出しを隠す */
-        flex-shrink: 0; /* 縮小を禁止（サイドバー幅拡大を可能にする） */
+            /* サイドバー全体のコンテナ (Script_Explorer + VFS_Explorer + Outline) */
+            width: 280px; /* 初期幅: 280px */
+            min-width: 150px; /* 最小幅: 150px */
+            background-color: rgb(30, 30, 30); /* 背景色: 暗いグレー */
+            display: flex; /* Flexboxコンテナとして設定 */
+            flex-direction: column; /* 子要素を縦方向に配置 */
+            overflow: hidden; /* はみ出しを隠す */
+            flex-shrink: 0; /* 縮小を禁止（サイドバー幅拡大を可能にする） */
 		}
 
 		/* サイドバー内の各パネルの共通スタイル */
 		#script_explorer_container, #vfs_explorer_container, #outline_container {
-        padding: 10px; /* 内部パディング */
-        box-sizing: border-box; /* パディングを幅と高さに含める */
-        overflow-y: auto; /* 縦スクロール可能 */
-        flex-shrink: 1; /* 縮小を許可 */
-        flex-grow: 1; /* 拡大を許可 */
+            padding: 10px; /* 内部パディング */
+            box-sizing: border-box; /* パディングを幅と高さに含める */
+            overflow-y: auto; /* 縦スクロール可能 */
+            flex-shrink: 1; /* 縮小を許可 */
+            flex-grow: 1; /* 拡大を許可 */
 		}
 		#script_explorer_container {
 			  flex-basis: 25%; /* 初期基準高さ: 25% (Script Explorerの初期高さの割合) */
@@ -706,52 +706,52 @@
 
 		/* サイドバー内のセクション見出し (h3) */
 		#sidebar_area_container h3 {
-        margin: 0 0 10px 0; /* マージン (上:0, 左右:0, 下:10px) */
-        font-size: 14px; /* フォントサイズ: 14px */
-        color: #ccc; /* 文字色: 薄いグレー */
-        border-bottom: 1px solid #555; /* 下境界線: 1px 濃いグレーの実線 */
-        padding-bottom: 5px; /* 下部パディング: 5px */
+            margin: 0 0 10px 0; /* マージン (上:0, 左右:0, 下:10px) */
+            font-size: 14px; /* フォントサイズ: 14px */
+            color: #ccc; /* 文字色: 薄いグレー */
+            border-bottom: 1px solid #555; /* 下境界線: 1px 濃いグレーの実線 */
+            padding-bottom: 5px; /* 下部パディング: 5px */
 		}
 
 		/* ### File Explorer Styles (ファイルエクスプローラーのスタイル) ### */
 		#script_explorer ul, #vfs_explorer ul { /* ツリー構造のリスト */
-        list-style: none; /* リストのマーカーを非表示 */
-        padding-left: 15px; /* 左パディング: 15px (インデント) */
-        margin: 0; /* マージンをリセット */
+            list-style: none; /* リストのマーカーを非表示 */
+            padding-left: 15px; /* 左パディング: 15px (インデント) */
+            margin: 0; /* マージンをリセット */
 		}
 		/* li 自体のスタイルは構造用のみに残す */
 		.explorer-item {
-        /* 以前の padding, cursor, color, hover は item_row へ移動 */
-        font-size: 14px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+            /* 以前の padding, cursor, color, hover は item_row へ移動 */
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
 		}
 		/* テキストとアイコンを含む「行」のスタイル */
 		.item_row {
-        padding: 4px; /* 内部パディング */
-        cursor: pointer; /* カーソル */
-        color: #ddd; /* 文字色 */
-        display: block; /* ブロック表示で幅いっぱいにする */
-        border-radius: 3px; /* 少し角丸に */
+            padding: 4px; /* 内部パディング */
+            cursor: pointer; /* カーソル */
+            color: #ddd; /* 文字色 */
+            display: block; /* ブロック表示で幅いっぱいにする */
+            border-radius: 3px; /* 少し角丸に */
 		}
 		/* ホバー時の背景色は「行」に対して適用 */
 		.item_row:hover {
-			  background-color: #555; /* ホバー時の背景色: 濃いグレー */
+			background-color: #555; /* ホバー時の背景色: 濃いグレー */
 		}
 		/* クリック選択時のスタイル */
 		.item_row.selected_item {
-        background-color: #007acc; /* 選択時: 青色 (VSCode風) */
-        color: white; /* 文字色を白で強調 */
+            background-color: #007acc; /* 選択時: 青色 (VSCode風) */
+            color: white; /* 文字色を白で強調 */
 		}
 
 		/* アイコン（:before疑似要素）は item_row に対して適用 */
 		.item_row::before {
-        font-family: "Consolas", monospace; /* アイコン用のフォント */
-        margin-right: 8px; /* 右マージン */
-        width: 16px; /* 幅 */
-        display: inline-block;
-        text-align: center;
+            font-family: "Consolas", monospace; /* アイコン用のフォント */
+            margin-right: 8px; /* 右マージン */
+            width: 16px; /* 幅 */
+            display: inline-block;
+            text-align: center;
 		}
 		/* フォルダかどうかは親の li (.folder-item) で判断し、アイコンは子の .item_row に出す */
 		.folder-item > .item_row::before {
@@ -773,112 +773,112 @@
 
 		/* ### Outline Styles (アウトラインのスタイル) ### */
 		.outline-item {
-        /* アウトラインの基本アイテム */
-        padding: 1px; /* 内部パディング: 1px */
-        cursor: pointer; /* カーソル: ポインター */
-        color: #fff; /* 文字色: 白 */
-        display: flex; /* Flexboxコンテナとして設定 */
-        align-items: center; /* 子要素を垂直方向の中央に揃える */
-        font-size: 14px; /* フォントサイズ: 14px */
+            /* アウトラインの基本アイテム */
+            padding: 1px; /* 内部パディング: 1px */
+            cursor: pointer; /* カーソル: ポインター */
+            color: #fff; /* 文字色: 白 */
+            display: flex; /* Flexboxコンテナとして設定 */
+            align-items: center; /* 子要素を垂直方向の中央に揃える */
+            font-size: 14px; /* フォントサイズ: 14px */
 		}
 		.outline-item:hover {
-			  background-color: rgb(150, 150, 150); /* ホバー時の背景色: 中程度のグレー */
+			background-color: rgb(150, 150, 150); /* ホバー時の背景色: 中程度のグレー */
 		}
 		.class-item {
-        /* クラス定義のアイテム */
-        color: rgb(30, 170, 30); /* 文字色: 緑系 */
-        font-size: 16px; /* フォントサイズ: 16px */
+            /* クラス定義のアイテム */
+            color: rgb(30, 170, 30); /* 文字色: 緑系 */
+            font-size: 16px; /* フォントサイズ: 16px */
 		}
 		.function-item {
-        /* 関数/メソッド定義のアイテム */
-        color: rgb(30, 120, 170); /* 文字色: 青系 */
-        padding-left: 15px; /* 左パディング: 15px (クラスよりインデント) */
-        font-size: 16px; /* フォントサイズ: 16px */
+            /* 関数/メソッド定義のアイテム */
+            color: rgb(30, 120, 170); /* 文字色: 青系 */
+            padding-left: 15px; /* 左パディング: 15px (クラスよりインデント) */
+            font-size: 16px; /* フォントサイズ: 16px */
 		}
 
 		/* ### Button Styles (各種ボタンのスタイル) ### */
 		.sidebar_button_css {
-        /* サイドバー内のボタンの共通スタイル */
-        display: inline-flex; /* inline-block から変更: SVGを中央配置しやすくするため */
-        width: 30px; /* 幅: 30px */
-        height: 20px; /* 高さ: 20px */
-        border-radius: 5%; /* 角丸: 5% */
-        font-size: 1em; /* フォントサイズ: 親要素と同じ */
-        margin-right: 3px; /* 右マージン: 3px */
-        text-align: center; /* テキストを中央揃え */
-        align-items: center;  /* 垂直中央 */
-        justify-content: center; /* 水平中央 */
-        cursor: pointer; /* カーソル: ポインター */
-        padding: 0px 0px; /* 内部パディング: 0 */
-        background: rgba(30, 30, 30, 1); /* 背景色: 暗いグレー (不透明) */
-        color: #ccc; /* 文字色: 薄いグレー */
-        line-height: 1em; /* 行の高さ: 親要素と同じ */
-        opacity: 1; /* 不透明度: 100% */
-        vertical-align: middle; /* 垂直方向の中央揃え */
-        transition: .1s; /* トランジション: 0.1秒 */
+            /* サイドバー内のボタンの共通スタイル */
+            display: inline-flex; /* inline-block から変更: SVGを中央配置しやすくするため */
+            width: 30px; /* 幅: 30px */
+            height: 20px; /* 高さ: 20px */
+            border-radius: 5%; /* 角丸: 5% */
+            font-size: 1em; /* フォントサイズ: 親要素と同じ */
+            margin-right: 3px; /* 右マージン: 3px */
+            text-align: center; /* テキストを中央揃え */
+            align-items: center;  /* 垂直中央 */
+            justify-content: center; /* 水平中央 */
+            cursor: pointer; /* カーソル: ポインター */
+            padding: 0px 0px; /* 内部パディング: 0 */
+            background: rgba(30, 30, 30, 1); /* 背景色: 暗いグレー (不透明) */
+            color: #ccc; /* 文字色: 薄いグレー */
+            line-height: 1em; /* 行の高さ: 親要素と同じ */
+            opacity: 1; /* 不透明度: 100% */
+            vertical-align: middle; /* 垂直方向の中央揃え */
+            transition: .1s; /* トランジション: 0.1秒 */
 		}
 		.sidebar_button_css:hover {
-        box-shadow: none; /* ホバー時のボックスシャドウを解除 */
-        opacity: 1; /* ホバー時の不透明度: 100% */
+            box-shadow: none; /* ホバー時のボックスシャドウを解除 */
+            opacity: 1; /* ホバー時の不透明度: 100% */
 		}
 
 		/* VFSエリアのドラッグオーバー時の視覚効果 */
 		#vfs_explorer_container.dragover {
-        background-color: #444; /* 背景を少し明るく */
-        border: 2px dashed #888; /* 境界線: 2px 濃いグレーの破線を表示 */
-        opacity: 0.8; /* 不透明度: 80% */
+            background-color: #444; /* 背景を少し明るく */
+            border: 2px dashed #888; /* 境界線: 2px 濃いグレーの破線を表示 */
+            opacity: 0.8; /* 不透明度: 80% */
 		}
 		/* VFS内部移動時のドロップターゲット強調 */
 		.vfs_drop_target {
-        background-color: #2a4d69 !important; /* 背景色: 青っぽく強調 (最優先) */
-        border: 1px dashed #63ace5; /* 境界線: 1px 明るい青の破線 */
-        color: white; /* 文字色: 白 */
+            background-color: #2a4d69 !important; /* 背景色: 青っぽく強調 (最優先) */
+            border: 1px dashed #63ace5; /* 境界線: 1px 明るい青の破線 */
+            color: white; /* 文字色: 白 */
 		}
 
 		.sidebar_button_container {
-        /* サイドバーボタンのコンテナ（横並び用） */
-        display: flex; /* Flexboxコンテナとして設定 */
-        gap: 0px; /* アイテム間の隙間: 0px */
+            /* サイドバーボタンのコンテナ（横並び用） */
+            display: flex; /* Flexboxコンテナとして設定 */
+            gap: 0px; /* アイテム間の隙間: 0px */
 		}
 		/* ### Sidebar Toggle Style (サイドバー切り替え) ### */
 		/* bodyタグに "sidebar-hidden" クラスが付いた時のスタイル */
 		body.sidebar-hidden #sidebar_area_container {
-        display: none; /* サイドバーを非表示 */
+            display: none; /* サイドバーを非表示 */
 		}
-			body.sidebar-hidden #sidebar_resizer_v {
-			  display: none; /* サイドバー横のリサイズバーも非表示 */
+        body.sidebar-hidden #sidebar_resizer_v {
+            display: none; /* サイドバー横のリサイズバーも非表示 */
 		}
 
 		/* ### Loading Overlay (ロード中画面) ### */
 		#loading_overlay {
-        position: fixed; /* 配置: 画面に固定 */
-        top: 0; /* 上端から: 0 */
-        left: 0; /* 左端から: 0 */
-        width: 100%; /* 幅: 100% */
-        height: 100%; /* 高さ: 100% */
-        background-color: rgba(0, 0, 0, 0.5); /* 背景色: 半透明の黒背景 */
-        z-index: 9999; /* Z軸の深さ: 最前面に表示 (ヘッダーより下) */
-        display: none; /* デフォルトは非表示 */
-        justify-content: center; /* 水平方向の中央揃え */
-        align-items: center; /* 垂直方向の中央揃え */
-        flex-direction: column; /* 子要素を縦方向に配置 */
-        color: white; /* 文字色: 白 */
-        font-size: 1.2em; /* フォントサイズ: 親要素の1.2倍 */
+            position: fixed; /* 配置: 画面に固定 */
+            top: 0; /* 上端から: 0 */
+            left: 0; /* 左端から: 0 */
+            width: 100%; /* 幅: 100% */
+            height: 100%; /* 高さ: 100% */
+            background-color: rgba(0, 0, 0, 0.5); /* 背景色: 半透明の黒背景 */
+            z-index: 9999; /* Z軸の深さ: 最前面に表示 (ヘッダーより下) */
+            display: none; /* デフォルトは非表示 */
+            justify-content: center; /* 水平方向の中央揃え */
+            align-items: center; /* 垂直方向の中央揃え */
+            flex-direction: column; /* 子要素を縦方向に配置 */
+            color: white; /* 文字色: 白 */
+            font-size: 1.2em; /* フォントサイズ: 親要素の1.2倍 */
 		}
 		.spinner {
-        /* 回転するローディングアニメーションの円 */
-        border: 8px solid #f3f3f3; /* 境界線: 8px 薄いグレーの実線 */
-        border-top: 8px solid #3498db; /* 境界線の上部: 8px 青色 (回転する部分) */
-        border-radius: 50%; /* 形状: 円形 */
-        width: 60px; /* 幅: 60px */
-        height: 60px; /* 高さ: 60px */
-        animation: spin 1s linear infinite; /* アニメーション: spin を 1秒かけて線形に無限に繰り返す */
-        margin-bottom: 15px; /* 下部マージン: 15px */
+            /* 回転するローディングアニメーションの円 */
+            border: 8px solid #f3f3f3; /* 境界線: 8px 薄いグレーの実線 */
+            border-top: 8px solid #3498db; /* 境界線の上部: 8px 青色 (回転する部分) */
+            border-radius: 50%; /* 形状: 円形 */
+            width: 60px; /* 幅: 60px */
+            height: 60px; /* 高さ: 60px */
+            animation: spin 1s linear infinite; /* アニメーション: spin を 1秒かけて線形に無限に繰り返す */
+            margin-bottom: 15px; /* 下部マージン: 15px */
 		}
-		  	@keyframes spin {
-        /* スピナーの回転アニメーションの定義 */
-        0% { transform: rotate(0deg); } /* 開始時: 0度回転 */
-        100% { transform: rotate(360deg); } /* 終了時: 360度回転 */
+        @keyframes spin {
+            /* スピナーの回転アニメーションの定義 */
+            0% { transform: rotate(0deg); } /* 開始時: 0度回転 */
+            100% { transform: rotate(360deg); } /* 終了時: 360度回転 */
 		}
     </style>
 
@@ -2169,8 +2169,8 @@ await main_async_def()
                     spreadsheet_container_element.appendChild(sheet_div);
 
                     // CSV文字列を2次元配列に簡易変換
-                    const parsed_data = data.content 
-                        ? data.content.trim().split("\n").map(row => row.split(",")) 
+                    const parsed_data = data.content
+                        ? data.content.trim().split("\n").map(row => row.split(","))
                         : [[]];
 
                     spreadsheet_instances[target_id] = jspreadsheet(sheet_div, {
@@ -4682,7 +4682,7 @@ sys.stderr = Web_Stdout()
                 // --------------- ### Agent_User_Verification (ユーザー確認)
                 if (data.cmd === "user_verification" && data.message) {
                     console.log("# host_frame_log : " + data.cmd, data.message);
-                    const response_payload = { "cmd": "Notification_completed", "message":  data.message };
+                    const response_payload = { "cmd": "Notification_completed", "message": data.message };
                     if (window.opener && !window.opener.closed) {
                         // ブックマークレットへの Post Message 処理
                         window.opener.postMessage(response_payload, "*");
@@ -4697,7 +4697,7 @@ sys.stderr = Web_Stdout()
                 // --------------- ### Agent_Goal_Achieved (タスク完了通知)
                 if (data.cmd === "goal_achieved" && data.message) {
                     console.log("# host_frame_log : " + data.cmd, data.message);
-                    const response_payload = { "cmd": "goal_achieved", "message":  data.message };
+                    const response_payload = { "cmd": "goal_achieved", "message": data.message };
                     if (window.opener && !window.opener.closed) {
                         // ブックマークレットへの Post Message 処理
                         window.opener.postMessage(response_payload, "*");
